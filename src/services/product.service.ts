@@ -7,12 +7,18 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://equippedafterdark.azurewebsites.net/api/products';
+  private apiUrl = 'http://localhost:5000/api/products';
 
   constructor(private http: HttpClient) {}
 
   // Get all products with optional filtering
-  getProducts(category?: string, sort?: string, type?: string, search?: string, includeAll: boolean = false): Observable<Product[]> {
+  getProducts(
+    category?: string,
+    sort?: string,
+    type?: string,
+    search?: string,
+    includeAll: boolean = false
+  ): Observable<Product[]> {
     let params = new HttpParams();
 
     // If includeAll is true, we won't set the category in the params
