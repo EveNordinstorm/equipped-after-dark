@@ -1,3 +1,13 @@
 * {
-    font-family: 'Tw Cen MT', sans-serif;
+  font-family: "Tw Cen MT", sans-serif;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding-top: 170px;
+  }
+}
+
+main {
+  padding-top: 64px;
 }
